@@ -1,0 +1,47 @@
+﻿/*The color and formating of this site are going to be VERY simple. My reasoning is that simple is best. Enough to catch your eye, but not too much to 
+  bore you to death. I have an award from last semester, voted by my peers, of simplicity being beauty. Will provide a picture if asked.
+*/
+body {
+    background-color: #f2f2f2;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+}
+nav {
+    border-bottom: solid;   
+}
+#lblFName, #lblLName, #lblEmail {
+    display: inline-block;
+    width: 140px;
+    text-align: right;
+}
+/*Using these controls to make sure everything is aligned. For some reason I struggle with lining things up in a form*/
+.wrapper {
+    background-color: whitesmoke;
+    list-style-type: none;
+    padding: 0;
+    border-radius: 3px;
+}
+.form-row {
+    display: flex;
+    justify-content: flex-end;
+    padding: .5em;
+}
+
+    .form-row > label {
+        padding: .5em 1em .5em 0;
+        flex: .5;
+    }
+
+    .form-row > input {
+        flex: 1;
+    }
+
+    .form-row > input,
+    .form-row > button {
+        padding: .5em;
+    }
+
+    .form-row > button {
+        background: gray;
+        color: white;
+        border: 0;
+    }
