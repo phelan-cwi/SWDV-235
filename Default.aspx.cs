@@ -16,4 +16,14 @@ public partial class _Default : System.Web.UI.Page
     {
 
     }
+
+    private string DatabaseErrorMessage(string errorMsg)
+    {
+        return $"<b>A database error has occurred:</b> {errorMsg}";
+    }
+    private string ConcurrencyErrorMessage()
+    {
+        return "Another user may have updated that category. Please try again";
+    }
+
 }

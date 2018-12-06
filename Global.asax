@@ -16,7 +16,17 @@
     void Application_Error(object sender, EventArgs e)
     {
         // Code that runs when an unhandled error occurs
+        // Get the error details
+    HttpException lastErrorWrapper = 
+        Server.GetLastError() as HttpException;
 
+    Exception lastError = lastErrorWrapper;
+    if (lastErrorWrapper.InnerException != null)
+        lastError = lastErrorWrapper.InnerException;
+
+    string lastErrorTypeName = lastError.GetType().ToString();
+    string lastErrorMessage = lastError.Message;
+    string lastErrorStackTrace = lastError.StackTrace;
     }
 
     void Session_Start(object sender, EventArgs e)
